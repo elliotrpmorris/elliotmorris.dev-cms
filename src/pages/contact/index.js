@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
 function encode(data) {
   return Object.keys(data)
@@ -36,10 +37,11 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <section>
+          <Grid>
+            <Row>
               <h1>Contact</h1>
+              <Col xs={12}>
               <form
                 name="contact"
                 method="post"
@@ -106,8 +108,9 @@ export default class Index extends React.Component {
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
+              </Col>
+            </Row>
+          </Grid>
         </section>
       </Layout>
     )

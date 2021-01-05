@@ -5,11 +5,11 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const WorkPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section>
+     <section>
       <Grid>
         <Row>
           <Col xs={12}>
@@ -24,18 +24,18 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-AboutPageTemplate.propTypes = {
+WorkPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const WorkPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <WorkPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -44,14 +44,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+WorkPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default WorkPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const workPageQuery = graphql`
+  query WorkPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

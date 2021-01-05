@@ -1,7 +1,45 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import styled from "styled-components";
+
+export const NavBar = styled.nav`
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+`;
+
+export const Page = styled(Link)`
+    cursor: pointer;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    text-decoration: none;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #000000;
+      transition: width 0.3s;
+      transform: background 0.5s;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (hover) {
+      &:hover,
+      &:focus {
+        color: #000000;
+        transition: color 0.6s;
+        &:after {
+          width: 100%;
+        }
+      }
+`;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -34,63 +72,26 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
+      <NavBar
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+        <Page to="/">
+          Home
+        </Page>
+        <Page to="/about">
+          About
+        </Page>
+        <Page to="/work">
+          Work
+        </Page>
+        <Page to="/blog">
+          Blog
+        </Page>
+        <Page to="/contact">
+          Contact
+        </Page>
+      </NavBar>
     )
   }
 }
