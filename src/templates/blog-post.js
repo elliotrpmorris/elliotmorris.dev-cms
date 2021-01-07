@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
 export const BlogPostTemplate = ({
   content,
@@ -17,20 +18,20 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <div>
+        <div>
+          <div>
+            <h1>
               {title}
             </h1>
             <p>{description}</p>
-            <PostContent content={content} />
+            <PostContent className='blog-content' content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
-                <ul className="taglist">
+                <ul>
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
@@ -59,22 +60,28 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
+      <Grid>
+        <Row>
+          <Col xs={12}>
+            <BlogPostTemplate
+              content={post.html}
+              contentComponent={HTMLContent}
+              description={post.frontmatter.description}
+              helmet={
+                <Helmet titleTemplate="%s | Blog">
+                  <title>{`${post.frontmatter.title}`}</title>
+                  <meta
+                    name="description"
+                    content={`${post.frontmatter.description}`}
+                  />
+                </Helmet>
+              }
+              tags={post.frontmatter.tags}
+              title={post.frontmatter.title}
             />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
+          </Col>
+        </Row>
+      </Grid>
     </Layout>
   )
 }

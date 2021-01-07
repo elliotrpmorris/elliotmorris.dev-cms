@@ -26,3 +26,8 @@ code {
 .post a {
   color: #000000;
 }
+
+.blog-content img {
+  width: 100%;
+  height: auto;
+}

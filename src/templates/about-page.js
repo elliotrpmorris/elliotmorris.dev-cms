@@ -13,9 +13,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <Grid>
         <Row>
           <Col xs={12}>
-            <h2>
+            <h1>
               {title}
-            </h2>
+            </h1>
             <PageContent content={content} />
           </Col>
         </Row>

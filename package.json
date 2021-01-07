@@ -30,7 +30,9 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
     "react-styled-flexboxgrid": "^3.2.1",
+    "react-time-ago": "^6.2.2",
     "styled-components": "^5.2.1",
+    "typewriter-effect": "^2.17.0",
     "uuid": "^7.0.0"
   },
   "keywords": [
