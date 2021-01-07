@@ -20,41 +20,36 @@ export const Title = styled.h3`
     margin: 0 0 .5rem 0;
 `;
 
-class BlogPost extends React.Component {
+export default class BlogPost extends React.Component {
     render() {
-        const post = this.props.post
-        
+
     return (
-      <Row>
-        <Col xs={12} sm={6} md={4}>
-            <article>
-                <Link
-                    to={post.fields.slug}
-                >
-                    <header>
-                        {post.frontmatter.featuredimage ? (
-                        <div>
-                            <PreviewCompatibleImage
-                            imageInfo={{
-                                image: post.frontmatter.featuredimage,
-                                alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                            }}
-                            />
-                        </div>
-                        ) : null}
-                        <TitleBackground>
-                        <Title>
-                            {post.frontmatter.title}
-                        </Title>
-                        <Time>
-                            Posted: <ReactTimeAgo date={new Date(post.frontmatter.date)} locale="en-US"/>
-                        </Time>
-                        </TitleBackground>
-                    </header>   
-                </Link>
-            </article>
-        </Col>
-      </Row>
+        <article>
+            <Link
+                to={this.props.post.fields.slug}
+            >
+                <header>
+                    {this.props.post.frontmatter.featuredimage ? (
+                    <div>
+                        <PreviewCompatibleImage
+                        imageInfo={{
+                            image: this.props.post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for post ${this.props.post.frontmatter.title}`,
+                        }}
+                        />
+                    </div>
+                    ) : null}
+                    <TitleBackground>
+                    <Title>
+                        {this.props.post.frontmatter.title}
+                    </Title>
+                    <Time>
+                        Posted: <ReactTimeAgo date={new Date(this.props.post.frontmatter.date)} locale="en-US"/>
+                    </Time>
+                    </TitleBackground>
+                </header>   
+            </Link>
+        </article>  
     )
   }
 }
