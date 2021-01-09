@@ -1,8 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { Link} from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { Col, Row } from "react-styled-flexboxgrid";
 import styled from "styled-components";
 import ReactTimeAgo from 'react-time-ago'
 

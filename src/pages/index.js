@@ -16,16 +16,23 @@ export const SubTitle = styled.p`
   justify-content: center;
   text-align: center;
 
-  font-size: 1.25rem;
+  font-size: .5rem;
+
+  @media (min-width: 360px) {
+    font-size: .75rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Title = styled.h1`
   color: #20232a;
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1rem;
   @media (min-width: 360px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   @media (min-width: 1270px) {
     font-size: 4.5rem;

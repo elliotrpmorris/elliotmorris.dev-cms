@@ -21,8 +21,8 @@ export const Title = styled.h3`
 
 class BlogRollSingle extends React.Component {
     render() {
-        const { data } = this.props
-        const { markdownRemark : post } = data
+      const { data } = this.props
+      const { node: post } = data.allMarkdownRemark.edges[0]
 
     return (
       <Row>
@@ -36,7 +36,9 @@ class BlogRollSingle extends React.Component {
 
 BlogRollSingle.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
   }),
 }
 
@@ -44,26 +46,33 @@ export default () => (
   <StaticQuery
     query={graphql`
       query BlogRollSingleQuery {
-        markdownRemark{
-            id
-            excerpt(pruneLength: 400)
-            fields {
+         allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          limit: 1
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
                 slug
-            }
-            frontmatter{
-            title
-            featuredpost
-            featuredimage {
-                childImageSharp {
-                fluid(maxWidth: 240, quality: 100) {
-                    ...GatsbyImageSharpFluid
+              }
+              frontmatter {
+                title
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
+                featuredpost
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
-                }
+              }
             }
-            tags
-            date
-            description
-            }
+          }
         }
       }
     `}

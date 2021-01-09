@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { graphql, StaticQuery } from 'gatsby'
 import { Col, Row } from "react-styled-flexboxgrid";
 import BlogPost from '../components/BlogPost'
 

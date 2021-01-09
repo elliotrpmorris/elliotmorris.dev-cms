@@ -4,22 +4,21 @@ path: /about
 title: About me
 ---
 
-### Shade-grown coffee
+I aim to craft excellent solutions to problems. By firstly choosing the right technologies for the job. Iterative implementations to ensure the highest quality and performance and finally maintaining relevant upkeep and extension of deployed solutions.
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+With experience leading projects technically from the ground up, providing technical talks to other internal engineers and consulting others with their problems.
 
-### Single origin
+### Current Role:
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+I am currently a software engineering consultant for BJSS based in leeds. Delivering a project using Python, AWS and Terraform.
 
-### Sustainable farming
+### Tech i like to use:
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+- Front end tech (HTML, CSS)
+- C#
+- GO
+- Python
+- JS/TS (React, Angular, Vue)
+- Cloud Providers (AWS, Azure)
 
-### Direct sourcing
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+But i mostly like to use what ever is the best fit for the problem at hand.

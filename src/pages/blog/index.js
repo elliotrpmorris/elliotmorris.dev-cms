@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Col, Row } from "react-styled-flexboxgrid";
+import { Grid} from "react-styled-flexboxgrid";
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
