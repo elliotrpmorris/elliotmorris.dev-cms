@@ -1,16 +1,15 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
-date: 2016-12-17T15:04:10.000Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by
-  coffee tasters, has been revised for the first time this year.
+title: AWS - Nitro Enclaves
+date: 2021-01-14T23:06:39.096Z
+description: What are they and why should you hear about them!
 featuredpost: false
 featuredimage: /img/product-page-diargam_nitro-enclaves_enclaves-2x.92bb883b919db62d2659339601fd9725eebb4351.png
 tags:
   - flavor
   - tasting
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+![flavor wheel](/img/product-page-diargam_nitro-enclaves_enclaves-2x.92bb883b919db62d2659339601fd9725eebb4351.png)
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
