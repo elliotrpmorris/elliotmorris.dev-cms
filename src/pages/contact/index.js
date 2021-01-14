@@ -112,6 +112,32 @@ export const TextBox = styled.textarea`
   outline: none;
   border: none;
   resize: vertical;
+  ::placeholder{
+    font-family: "Work Sans", sans-serif;
+  }
+`;
+
+export const Btn = styled.button`
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: 50px;
+  border-radius: 27px;
+  background: #323741;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 function encode(data) {
@@ -206,9 +232,9 @@ export default class Index extends React.Component {
                   </WrapInput>
                   <br></br>
                     <div className="field">
-                      <button type="submit">
+                      <Btn type="submit">
                         Send
-                      </button>
+                      </Btn>
                     </div>
                   </form>
                 </Card>
