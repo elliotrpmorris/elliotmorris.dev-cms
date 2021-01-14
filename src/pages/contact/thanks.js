@@ -15,7 +15,7 @@ export default () => (
       <Grid>
         <Row>
           <Col xs={12}>
-            <Title>Great to hear from you!</Title>
+            <Title>So great to hear from you!</Title>
             <p>I will be in touch ASAP.</p>
           </Col>
         </Row>
