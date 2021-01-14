@@ -10,6 +10,10 @@ export const TitleBackground = styled.div`
   text-align: center;
 `;
 
+export const Post = styled.article`
+  margin-bottom: 1.5rem;
+`;
+
 export const Time = styled.div`
     text-align: right;
 `;
@@ -22,7 +26,7 @@ export default class BlogPost extends React.Component {
     render() {
 
     return (
-        <article>
+        <Post>
             <Link
                 to={this.props.post.fields.slug}
             >
@@ -47,7 +51,7 @@ export default class BlogPost extends React.Component {
                     </TitleBackground>
                 </header>   
             </Link>
-        </article>  
+        </Post>  
     )
   }
 }

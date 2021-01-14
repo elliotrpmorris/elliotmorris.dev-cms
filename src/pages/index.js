@@ -10,7 +10,7 @@ import en from 'javascript-time-ago/locale/en'
 
 TimeAgo.addDefaultLocale(en)
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.h2`
   color: #20232a;
   display: flex;
   justify-content: center;
@@ -66,7 +66,7 @@ export const IndexPageTemplate = () => (
       </Row>
       <Row>
         <Col xs={12}>
-          <h2>My latest piece</h2>
+          <h3>My latest piece</h3>
           <BlogRollSingle />
         </Col>
       </Row>

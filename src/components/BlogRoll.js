@@ -13,7 +13,7 @@ class BlogRoll extends React.Component {
       <Row>
         {posts &&
           posts.map(({ node: post }) => (
-            <Col xs={4} key={post.id}>
+            <Col xs={12} md={6} lg={4} key={post.id}>
               <BlogPost post={post} />
             </Col>
           ))}

@@ -10,6 +10,19 @@ export const Title = styled.h1`
   font-size: 2.5rem;
 `;
 
+export const SubTitle = styled.h2`
+  color: #20232a;
+  margin-bottom: 0;
+  font-size: .5rem;
+
+  @media (min-width: 360px) {
+    font-size: .75rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,7 +31,7 @@ export const Card = styled.div`
   padding: 2.5rem;
   background-color: #d8d8d8;
   color: black;
-  @media (min-width: 360px) {
+  @media (min-width: 768px) {
     padding: 5rem;
   }
 
@@ -180,6 +193,7 @@ export default class Index extends React.Component {
               <Col xs={12}>
                 <Card>
                   <Title>Contact</Title>
+                  <SubTitle>Interested in working together or just fancy a chat? Send me a message!</SubTitle>
                   <form
                     name="contact"
                     method="post"
