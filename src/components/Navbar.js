@@ -11,9 +11,13 @@ export const NavBar = styled.nav`
 
 export const Page = styled(Link)`
     cursor: pointer;
-    margin: 1.5rem 1rem 1.5rem 1rem;
+    margin: 1.5rem .5rem 1.5rem .5rem;
     font-size: 1.25rem;
     
+    @media (min-width: 380px) {
+      margin: 1.5rem 1rem 1.5rem 1rem;
+    }
+
     &:last-child {
       margin-right: 0;
     }
