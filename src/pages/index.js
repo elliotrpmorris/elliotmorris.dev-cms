@@ -16,24 +16,19 @@ export const SubTitle = styled.h2`
   justify-content: center;
   text-align: center;
 
-  font-size: .5rem;
+  font-size: 1rem;
 
-  @media (min-width: 360px) {
-    font-size: .75rem;
-  }
   @media (min-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 `;
 
 export const Title = styled.h1`
   color: #20232a;
   display: flex;
-  justify-content: center;
-  font-size: 1rem;
-  @media (min-width: 360px) {
-    font-size: 1.5rem;
-  }
+  flex-wrap: wrap;  
+  font-size: 2.5rem;
+
   @media (min-width: 1270px) {
     font-size: 4.5rem;
   }
@@ -51,14 +46,17 @@ export const IndexPageTemplate = () => (
         <Col xs={12}>
           <Background>
             <Title>
-              Hey, I'm Elliot!&nbsp;
+             <span style={{flexBasis: "100%"}}>Hey, I'm Elliot!</span> 
+             <span style={{flexBasis: "100%"}}>
               <Typewriter
                 options={{
                   strings: ['An engineer.', 'An architect.', 'A consultant.'],
                   autoStart: true,
                   loop: true,
                 }}
+                
               />
+              </span> 
             </Title>
             <SubTitle>Or what ever you'd like to call me... Im here to solve your technology & engineering problems!</SubTitle>
           </Background>

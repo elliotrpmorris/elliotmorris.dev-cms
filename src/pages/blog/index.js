@@ -29,7 +29,7 @@ export default class BlogIndexPage extends React.Component {
       <Layout>
         <Grid>
           <Title>
-            Latest Blog posts
+            Blog
           </Title>
           <SubTitle>
             Here you will find me talking about what i've been getting up too.

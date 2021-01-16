@@ -44,10 +44,16 @@ code {
 }
 
 .blog-content img {
-  width: 50%;
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .blog-content img {
+    width: 75%;
+  }
 }
 
 html {
