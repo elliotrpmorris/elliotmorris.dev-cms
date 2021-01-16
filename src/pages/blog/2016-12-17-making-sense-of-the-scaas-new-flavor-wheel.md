@@ -22,7 +22,7 @@ Recently i have been working with the public sector and requires maximum secruit
 * Flexible
 * Additional isolation and security
 
-Encalves are great for processing senestive data and can intergrate with AWS KMS allows you to use attestion to verify the enclaves identity meaning the key in KMS can only be used by a verifed enclave.
+Enclaves are great for processing senestive data and can intergrate with AWS KMS allows you to use attestion to verify the enclaves identity meaning the key in KMS can only be used by a verifed enclave.
 
 ### How to use them
 
