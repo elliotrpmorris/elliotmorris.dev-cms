@@ -36,7 +36,10 @@ export const Title = styled.h1`
 
 export const Background = styled.div`
   background-color: #d8d8d8;
-  padding: 1.5rem;
+  padding: 1.25rem;
+  @media (min-width: 380px) {
+    padding: 1.5rem;
+  }
 `;
 
 export const IndexPageTemplate = () => (
