@@ -27,20 +27,18 @@ a {
   color: #000000;
 }
 
-code {
+/* Blog post content */
+.blog-content pre {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+  background: #fafafa !important;
+}
+
+.blog-content code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-/* Blog post content */
-.post p > img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.post a {
-  color: #000000;
 }
 
 .blog-content img {
