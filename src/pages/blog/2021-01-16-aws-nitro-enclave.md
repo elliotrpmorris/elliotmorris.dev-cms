@@ -29,13 +29,11 @@ Enough about Nitro here's how Nitro Enclaves come into play. ⬇️
 
 ![enclave diagram](/img/nitro-enclave.png)
 
-**Source**: <https://aws.amazon.com/ec2/nitro/nitro-enclaves/>
-
 ### Use case overview
 
 ---
 
-Recently I have been working with a public sector organisation who requires maximum security as you can imagine. Enclaves are great fit for this project as they allow you to create an isolated VM **(Virtual Machine)** that has its own Kernel, CPU, and memory.
+Recently I have been working with a public sector organisation who requires maximum security as you can imagine. Enclaves are a great fit for this project as they allow you to create an isolated VM **(Virtual Machine)** that has its own Kernel, CPU, and memory.
 
 You can only talk to said enclave using a local channel in the form of a [vSocket](https://vdc-repo.vmware.com/vmwb-repository/dcr-public/c509579b-fc98-4ec2-bf0c-cadaebc51017/f572d815-0e80-4448-a354-dff39a1d545e/doc/vsockAbout.3.2.html). Meaning if an attacker managed to get on to the host machine they wouldn't be able to touch the enclave.
 
@@ -47,7 +45,7 @@ You can only talk to said enclave using a local channel in the form of a [vSocke
 - Flexible
 - Additional isolation and security
 
-Enclaves are great for processing sensitive data as they are fully isolated from the parent. They can also integrate with AWS KMS **(Key Management Service)**. Meaning only attested enclaves are allow to decrypt with the KMS key. Providing them extra layers of security.
+Enclaves are great for processing sensitive data as they are fully isolated from the parent. They can also integrate with AWS KMS **(Key Management Service)**. Meaning only attested enclaves are allowed to decrypt with the KMS key. Providing them extra layers of security.
 
 ## Example Implementation
 
@@ -61,7 +59,7 @@ In this example I will show you how to set up an enclave and how to talk to it v
 
 ---
 
-- You first need to create a ec2 instance that is using the nitro system. Under configure instance you can tick to enable enclaves.
+- You first need to create an ec2 instance that is using the nitro system. Under configure instance you can tick to enable enclaves.
 
 ![ec2 enclave](/img/ec2-enclave.PNG)
 
@@ -138,19 +136,19 @@ if __name__ == '__main__':
 
 Save this as `server.py`.
 
-Now to build the enclave you use:
+- Now to build the enclave you use:
 
 ```
 sudo nitro-cli build-enclave --docker-path . --output-file server.eif
 ```
 
-To run the built enclave image use:
+- To run the built enclave image use:
 
 ```
 sudo nitro-cli run-enclave --cpu-count 2 --memory 512 --eif-path server.eif --debug-mode
 ```
 
-To view the read only console of the enclave use:
+- To view the read only console of the enclave use:
 
 ```
 ENCLAVE_ID=$(nitro-cli describe-enclaves | jq -r .[0].EnclaveID)
@@ -162,9 +160,9 @@ nitro-cli console --enclave-id $ENCLAVE_ID
 
 ---
 
-Now for the client. I suggest opening another ssh connection to your ec2 so you can clearly see both outputs from the sever and client easily.
+- Now for the client. I suggest opening another ssh connection to your ec2 so you can clearly see both outputs from the server and client easily.
 
-Copy over the below file on to the host.
+- Copy over the below file on to the host.
 
 #### Client python code
 
@@ -209,7 +207,7 @@ if __name__ == '__main__':
 
 Save this as `client.py`.
 
-Now to run the client. Here we are grabbing the CID of the enclave and passing it in to the client script.
+- Now to run the client. Here we are grabbing the CID of the enclave and passing it in to the client script.
 
 ```
 CID=$(nitro-cli describe-enclaves | jq -r .[0].EnclaveCID)
@@ -217,7 +215,9 @@ CID=$(nitro-cli describe-enclaves | jq -r .[0].EnclaveCID)
 python3 ./client.py $CID
 ```
 
-Now you will be able to see the output from both the enclave and ec2 host. You have successfully talked to the enclave over vSocket! Let your imagination take you to the next level on what you can do with this!
+- Now you can see the output from both the enclave and ec2 host.
+
+You have successfully talked to the enclave over vSocket! Let your imagination take you to the next level on what you can do with this!
 
 ## Conclusion
 
