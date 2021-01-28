@@ -196,3 +196,14 @@ Now you will be able to see the output from both the enclave and ec2 host you ha
 ## Conclusion
 
 I only scratched the surface here at what enclaves are capable of but with this simple example you can see how great they are for sensitive data processing.
+
+## Enclave tips
+
+Heres some issues i found during my time using nitro enclaves, I will aim to update this over time:
+
+- 'Could not open /env file: No such file or directory'
+  This error message appeared a lot and was not clear what was going on it turns out that this is caused by when the enclave runs out of memory this can be fixed by increasing the hugepages size.
+
+```
+echo "vm.nr_hugepages=1536" | sudo tee /etc/sysctl.d/99-nitro.conf; sudo sysctl -p /etc/sysctl.d/99-nitro.conf
+```
