@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: AWS - Nitro Enclaves whats popping?
-date: 2021-01-27T18:46:47.611Z
+date: 2021-01-28T19:19:31.800Z
 description: What is Nitro and why you should care about their enclaves.
 featuredpost: true
 featuredimage: /img/nitro-enclave.png
