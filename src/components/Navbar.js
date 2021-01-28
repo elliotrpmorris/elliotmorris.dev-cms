@@ -43,6 +43,7 @@ export const Page = styled(Link)`
           width: 100%;
         }
       }
+    }
 `;
 
 const Navbar = class extends React.Component {
