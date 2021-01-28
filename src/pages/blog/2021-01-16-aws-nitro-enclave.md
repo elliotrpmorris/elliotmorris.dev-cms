@@ -47,7 +47,7 @@ You can only talk to said enclave using a local channel in the form of a [vSocke
 - Flexible
 - Additional isolation and security
 
-Enclaves are great for processing sensitive data and can integrate with AWS KMS **(Key Management Service)** which allows you to use attestation to verify the enclaves identity meaning the key in KMS can only be used by a verified enclave.
+Enclaves are great for processing sensitive data as they are fully isolated from the parent. They can also integrate with AWS KMS **(Key Management Service)**. Meaning only attested enclaves are allow to decrypt with the KMS key. Providing them extra layers of security.
 
 ## Example Implementation
 
