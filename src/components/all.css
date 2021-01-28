@@ -54,6 +54,29 @@ a {
   }
 }
 
+.blog-content a {
+  display: inline-block;
+}
+
+.blog-content hr {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
+}
+
+.blog-content a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  transition: width 0.3s;
+  transform: background 0.5s;
+  color: #000000;
+  position: relative;
+  z-index: 2;
+}
+
 html {
   cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA/klEQVQ4ja3UzSoFYRgH8J+ZYkHZkLU6FlZuwC1YWioXoOQOLKWUrazIztLuLGWjlCU7bEQ+EnUSwmLO5G0y3+dfTzNv0/zmeZ9mJpZkBR+40zJR/ziHc9xgAzNt4WX8ZOoMq5hsAnb+AdN6xxEWMVwHvS1A03rGDuYxVAYeVgDDupbMu5MHrtUE0/pCF0sYiwLwuGwLOXnEBa7QCy/EeK3Y1Yu/WcZFT+sWIG/YxwJGqra/noM9qfg+Rpl13hy38VC1qzCjkm86O6/xJlia0wy42QaDrQDrYarOzdkZwklwvof7xq31M4FvfGK6LZbmEgeDwmAXs4MEc/8gZfkFeGdvNUbbx6sAAAAASUVORK5CYII="),
     auto;
