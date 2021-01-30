@@ -5,12 +5,12 @@ import { faGithub, faLinkedin, } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Link = styled.a`      
+export const Link = styled.a`
     text-align: center;
     text-deceration: none;
 `;
 
-export const FooterWrapper = styled.div`      
+export const FooterWrapper = styled.div`
   text-align: center;
   margin-top 1.5rem;
   margin-bottom: 1rem;
@@ -46,9 +46,6 @@ const Footer = class extends React.Component {
           <Grid>
             <Row middle="md">
                 <Col xs={12}>
-                  <Link href="https://elliotmorris.dev">
-                    <Icon icon={faGlobe}/>
-                  </Link> 
                   <Link href="https://github.com/elliotrpmorris">
                     <Icon icon={faGithub}/>
                   </Link>
