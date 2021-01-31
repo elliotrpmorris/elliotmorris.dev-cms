@@ -36,6 +36,10 @@ a {
   background: #fafafa !important;
 }
 
+.blog-content h1 {
+  font-size: 2.5rem;
+}
+
 .blog-content code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
