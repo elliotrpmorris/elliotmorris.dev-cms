@@ -2,7 +2,6 @@ import React from 'react'
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
 import styled from "styled-components";
 import { faGithub, faLinkedin, } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Link = styled.a`
@@ -19,7 +18,6 @@ export const FooterWrapper = styled.div`
 export const Icon = styled(FontAwesomeIcon)`
   color: #323741;
   margin: 0 .5rem;
-  font-size: 1.75rem;
   :hover{
     animation: text-shadow-pop-bottom 0.6s both;
     color: #d7d3cb;
@@ -47,10 +45,10 @@ const Footer = class extends React.Component {
             <Row middle="md">
                 <Col xs={12}>
                   <Link href="https://github.com/elliotrpmorris">
-                    <Icon icon={faGithub}/>
+                    <Icon style={{width: '28px', height: '28px'}} icon={faGithub}/>
                   </Link>
                   <Link href="https://www.linkedin.com/in/elliotrpmorris/">
-                    <Icon icon={faLinkedin}/>
+                    <Icon style={{width: '24.5px', height: '28px'}} icon={faLinkedin}/>
                   </Link>
                 </Col>
             </Row>
