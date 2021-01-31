@@ -5,6 +5,7 @@ module.exports = {
       'Elliot Morris Personal Site',
   },
   plugins: [ 
+    'gatsby-plugin-styled-components',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -30,7 +31,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components', 
     {
       resolve: 'gatsby-transformer-remark',
       options: {
