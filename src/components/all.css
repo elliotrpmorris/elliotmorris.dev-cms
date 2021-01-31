@@ -58,6 +58,10 @@ a {
   display: inline-block;
 }
 
+.blog-content h2 {
+  font-size: 1.75rem;
+}
+
 .blog-content hr {
   border: 0;
   border-bottom: 1px dashed #ccc;

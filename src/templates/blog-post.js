@@ -10,6 +10,8 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   font-size: 2.5rem;
+  line-height: 1;
+  margin: 0.5rem 0;
 `;
 
 export const BlogPostTemplate = ({
