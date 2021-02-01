@@ -11,35 +11,20 @@ import en from 'javascript-time-ago/locale/en'
 TimeAgo.addDefaultLocale(en)
 
 export const SubTitle = styled.h2`
-  color: #20232a;
   display: flex;
   justify-content: center;
   text-align: center;
-
-  font-size: 1rem;
-
-  @media (min-width: 768px) {
-    font-size: 1.5rem;
-  }
 `;
 
 export const Title = styled.h1`
-  color: #20232a;
   display: flex;
   flex-wrap: wrap;  
-  font-size: 2.5rem;
-
-  @media (min-width: 1270px) {
-    font-size: 4.5rem;
-  }
 `;
 
 export const Background = styled.div`
   background-color: #d8d8d8;
   padding: 1.25rem;
-  @media (min-width: 380px) {
-    padding: 1.5rem;
-  }
+
 `;
 
 export const IndexPageTemplate = () => (

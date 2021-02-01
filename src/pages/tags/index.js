@@ -3,14 +3,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import styled from "styled-components";
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
-
-export const Title = styled.h1`
-  line-height: 1;
-  margin: 0.5rem 0;
-  font-size: 2.5rem;
-`;
 
 const TagsPage = ({
   data: {
@@ -26,7 +19,7 @@ const TagsPage = ({
         <Col xs={12}>
           <Helmet title={`Tags | ${title}`} />
           <div>
-            <Title>Tags</Title>
+            <h1>Tags</h1>
             <ul>
               {group.map((tag) => (
                 <li key={tag.fieldValue}>
