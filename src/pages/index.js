@@ -12,8 +12,13 @@ TimeAgo.addDefaultLocale(en)
 
 export const SubTitle = styled.h2`
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`

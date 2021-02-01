@@ -11,7 +11,7 @@ export const Card = styled.div`
   flex-direction: column;
   z-index: 1;
   position: relative;
-  padding: 2.5rem;
+  padding: 1.5rem;
   background-color: #d8d8d8;
   color: black;
   @media (min-width: 768px) {

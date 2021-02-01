@@ -12,13 +12,18 @@ With experience leading projects technically from the ground up, providing techn
 
 I am currently a software engineering consultant for BJSS based in leeds. Delivering a project using Python, AWS and Terraform.
 
-### Tech i like to use:
+### Tech i have experience in:
 
-- Front end tech (HTML, CSS)
 - C#
 - GO
 - Python
+- PHP
+- HTML, CSS
 - JS/TS (React, Angular, Vue)
 - Cloud Providers (AWS, Azure)
+- Containers (Docker, AKS, Kubernetes, ECS/ECR)
+- API (REST, GraphQL)
+- DB (PostGreSQL, MS/MYSQL, DynamoDB, CosmosDB)
+- GIT
 
-But i mostly like to use what ever is the best fit for the problem at hand.
+But i mostly like to use what ever is the best fit for the problem at hand. So don't worry if its not on the list as I can rapidly up skill and jump right in!
