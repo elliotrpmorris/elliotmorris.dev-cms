@@ -34,7 +34,10 @@ export const Card = styled.div`
     top: 0;
     width: 100%;
     z-index: -1;
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
+    @media (min-width: 400px){
+      transform: rotate(-2deg);
+    }
     box-shadow: -1px 1px 24px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
   }
