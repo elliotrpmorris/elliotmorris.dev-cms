@@ -18,10 +18,6 @@ export const Time = styled.div`
     text-align: right;
 `;
 
-export const Title = styled.h3`
-    margin: 0 0 .5rem 0;
-`;
-
 export default class BlogPost extends React.Component {
     render() {
 
@@ -42,9 +38,9 @@ export default class BlogPost extends React.Component {
                     </div>
                     ) : null}
                     <TitleBackground>
-                    <Title>
+                    <h3>
                         {this.props.post.frontmatter.title}
-                    </Title>
+                    </h3>
                     <Time>
                         Posted: <ReactTimeAgo date={new Date(this.props.post.frontmatter.date)} locale="en-US"/>
                     </Time>

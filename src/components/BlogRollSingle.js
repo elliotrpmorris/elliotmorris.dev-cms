@@ -15,9 +15,6 @@ export const Time = styled.div`
     text-align: right;
 `;
 
-export const Title = styled.h3`
-    margin: 0 0 .5rem 0;
-`;
 
 class BlogRollSingle extends React.Component {
     render() {

@@ -4,24 +4,7 @@ import Layout from '../../components/Layout'
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  line-height: 1;
-  margin: 0.5rem 0;
-  font-size: 2.5rem;
-`;
 
-export const SubTitle = styled.h2`
-  color: #20232a;
-  margin-bottom: 0;
-  font-size: .5rem;
-
-  @media (min-width: 360px) {
-    font-size: .75rem;
-  }
-  @media (min-width: 768px) {
-    font-size: 1rem;
-  }
-`;
 
 export const Card = styled.div`
   display: flex;
@@ -192,8 +175,8 @@ export default class Index extends React.Component {
             <Row>  
               <Col xs={12}>
                 <Card>
-                  <Title>Contact</Title>
-                  <SubTitle>Interested in working together or just fancy a chat? Send me a message!</SubTitle>
+                  <h1>Contact</h1>
+                  <p>Interested in working together or just fancy a chat? Send me a message!</p>
                   <form
                     name="contact"
                     method="post"

@@ -6,12 +6,6 @@ import Content, { HTMLContent } from '../components/Content'
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  line-height: 1;
-  margin: 0.5rem 0;
-  font-size: 2.5rem;
-`;
-
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,9 +54,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <Row>
           <Col xs={12}>
             <Card>
-              <Title>
+              <h1>
                 {title}
-              </Title>
+              </h1>
               <PageContent content={content} />
             </Card>
           </Col>

@@ -6,13 +6,6 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
-import styled from "styled-components";
-
-export const Title = styled.h1`
-  font-size: 2.5rem;
-  line-height: 1;
-  margin: 0.5rem 0;
-`;
 
 export const BlogPostTemplate = ({
   content,
@@ -30,9 +23,9 @@ export const BlogPostTemplate = ({
       <div>
         <div>
           <div>
-            <Title>
+            <h1>
               {title}
-            </Title>
+            </h1>
             <p>{description}</p>
             <PostContent className='blog-content' content={content} />
             {tags && tags.length ? (
