@@ -10,7 +10,7 @@ import en from 'javascript-time-ago/locale/en'
 
 TimeAgo.addDefaultLocale(en)
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled.p`
   display: flex;
   justify-content: left;
   text-align: left;
