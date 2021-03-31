@@ -7,6 +7,7 @@ featuredpost: true
 featuredimage: /img/nitro-enclave.png
 tags:
   - aws
+  - python
 ---
 
 ## Introduction to Nitro
