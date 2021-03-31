@@ -10,6 +10,17 @@ import en from 'javascript-time-ago/locale/en'
 
 TimeAgo.addDefaultLocale(en)
 
+export const SubTitle = styled.p`
+  display: flex;
+  justify-content: left;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    text-align: center;
+  }
+`;
+
 export const Title = styled.h1`
   display: flex;
   flex-wrap: wrap;  
@@ -40,7 +51,7 @@ export const IndexPageTemplate = () => (
               />
               </span> 
             </Title>
-            <p>Or what ever you'd like to call me... Im here to solve your technology & engineering problems!</p>
+            <SubTitle>Or what ever you'd like to call me... Im here to solve your technology & engineering problems!</SubTitle>
           </Background>
         </Col>
       </Row>
