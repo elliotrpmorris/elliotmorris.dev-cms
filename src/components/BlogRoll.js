@@ -3,8 +3,13 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import { Col, Row } from "react-styled-flexboxgrid";
 import BlogPost from '../components/BlogPost'
+import en from 'javascript-time-ago/locale/en'
+import TimeAgo from 'javascript-time-ago'
+
+TimeAgo.addDefaultLocale(en)
 
 class BlogRoll extends React.Component {
+ 
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
