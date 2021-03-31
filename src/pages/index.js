@@ -4,11 +4,11 @@ import { Grid, Col, Row } from "react-styled-flexboxgrid";
 import Layout from "../components/Layout";
 import Typewriter from 'typewriter-effect';
 import BlogRollSingle from "../components/BlogRollSingle";
-import TimeAgo from 'javascript-time-ago'
+// import TimeAgo from 'javascript-time-ago'
 
-import en from 'javascript-time-ago/locale/en'
+// import en from 'javascript-time-ago/locale/en'
 
-TimeAgo.addDefaultLocale(en)
+// TimeAgo.addDefaultLocale(en)
 
 export const SubTitle = styled.p`
   display: flex;
