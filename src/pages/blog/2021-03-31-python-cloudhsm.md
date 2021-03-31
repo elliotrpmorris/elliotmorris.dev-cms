@@ -66,8 +66,6 @@ A crypto officer (CO) can perform user management operations. For example, a CO 
 
 When you activate a new cluster, the user changes from a Precrypto Officer (PRECO) to a crypto officer (CO).
 
-> _Source - https://docs.aws.amazon.com/cloudhsm/latest/userguide/manage-hsm-users.html#crypto-officer_
-
 We will already have a CO we can use to create our CU now the cluster is activated.
 
 #### **CU (Crypto user)**
@@ -76,8 +74,6 @@ A crypto user (CU) can perform the following key management and cryptographic op
 
 - Key management – Create, delete, share, import, and export cryptographic keys.
 - Cryptographic operations – Use cryptographic keys for encryption, decryption, signing, verifying, and more.
-
-> _Source - https://docs.aws.amazon.com/cloudhsm/latest/userguide/manage-hsm-users.html#crypto-user_
 
 ## Prerequisites for sample application
 
