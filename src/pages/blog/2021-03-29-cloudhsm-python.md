@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Communicating with a CloudHSM via PyKCS11 & Python
+title: Python - Communicating with a CloudHSM/ 
 date: 2021-03-29T19:19:31.800Z
-description: How to sign data using keys stored in CloudHSM
+description: How to sign data using keys stored in CloudHSM.
 featuredpost: true
 featuredimage: /img/hsm.png
 tags:
