@@ -3,6 +3,10 @@ import { Link} from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import styled from "styled-components";
 import ReactTimeAgo from 'react-time-ago'
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+
+TimeAgo.addDefaultLocale(en)
 
 export const TitleBackground = styled.div`
   background-color: #c2c2c2;
