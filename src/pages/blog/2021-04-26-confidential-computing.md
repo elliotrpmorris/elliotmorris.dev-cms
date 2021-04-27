@@ -14,14 +14,14 @@ tags:
 
 ## Introduction to confidential computing
 
-Secure computing is the act of executing code in a trusted execution environment (TEEs) allowing increase security of code executed as the environment has to be trusted or in more technical terms attested. In this post we will cover two popular secure computing services. Highlighting some pros and cons of each and provide you with a overview on why you might want to consider secure computing.
+Secure computing is the act of executing code in a trusted execution environment (TEEs) allowing increase security of code executed as the environment has to be trusted or in more technical terms attested. In this post we will cover two popular secure computing services. Highlighting some pros and cons of each and provide you with an overview of why you might want to consider secure computing.
 
 ![secure compute](/img/secure-compute.png)
 
 
 ## Confidential computing background
 
-Confidential computing is an industry term defined by the [Confidential Computing Consortium (CCC)](https://confidentialcomputing.io/) - a foundation dedicated to defining and accelerating the adoption of confidential computing. The CCC defines confidential computing as: The protection of data in use by performing computations in a hardware-based Trusted Execution Environment (TEE).
+Confidential computing is an industry term defined by the [Confidential Computing Consortium (CCC)](https://confidentialcomputing.io/) - a foundation dedicated to defining and accelerating the adoption of confidential computing. The CCC defines confidential computing as. The protection of data in use by performing computations in a hardware-based Trusted Execution Environment (TEE).
 
 ## Attestation
 
@@ -29,31 +29,31 @@ Attestation is the feature that allows the below services to be TEEs. This means
 
 With Nitro Enclaves The attestation process uses a series of measurements that are unique to an enclave. You can use these measurements to create access policies in external services to grant the enclave access to special cryptographic operations.
 
-This can be implemented for example with nitro enclaves you provide a attestation document with your request to KMS this can be then used to allow only the enclave permission to decrypt records by limiting the KMS key policy to be restricted to the measurements of your attested enclave.
+This can be implemented for example with nitro enclaves you provide an attestation document with your request to KMS this can be then used to allow only the enclave permission to decrypt records by limiting the KMS key policy to be restricted to the measurements of your attested enclave.
 
 ## Confidential computing services
 
 ### AWS Nitro Enclaves
 
-I have first hand experience using nitro enclaves, the experience has been challenging but rewarding to know that the solution we have provided our client will meet the tough security requirements it needs. 
+I have first-hand experience using nitro enclaves, the experience has been challenging but rewarding to know that the solution we have provided our client will meet the tough security requirements it needs. 
 
-You can read more about my first hand experience in my blog post about [Nitro Enclaves](https://elliotmorris.dev/blog/2021-01-16-aws-nitro-enclave/). 
+You can read more about my first-hand experience in my blog post about [Nitro Enclaves](https://elliotmorris.dev/blog/2021-01-16-aws-nitro-enclave/). 
 
 #### Pros
 
 - No extra cost for using a EC2 with nitro.
-- Runs a full isolated VM along side your EC2 with its own kernel, CPU and memory.
+- Runs a full isolated VM alongside your EC2 with its own kernel, CPU, and memory.
 - Integration with other AWS services such as KMS and ACM.
 - Has a easy to use CLI tool. 
 - The enclave images are generated from a DockerFile.
 
 #### Cons
 
-- [AWS SDK (boto3) doesn't support attestation](https://github.com/boto/botocore/issues/2271) (Have to call the KMS API direct look out for a post on this on the future!).
+- [AWS SDK (boto3) doesn't support attestation](https://github.com/boto/botocore/issues/2271) (Have to call the KMS API direct lookout for a post on this in the future!).
 - Still very new limited documentation and guides online.
-- Not everything that you can do in a DockerFile can be done in a enclave image.
+- Not everything that you can do in a DockerFile can be done in an enclave image.
 
-If you would like to learn more on Nitro Enclaves checkout the docs [here](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html).
+If you would like to learn more on Nitro Enclaves check out the docs [here](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html).
 
 ### Azure Confidential Compute
 
@@ -67,20 +67,20 @@ Unlike Nitro enclaves, ACC isn't a single service rather it's a collection of to
 
 ### Cons
 
-- Unlike nitro enclaves it doesn't run as a full VM and requires software components to be developed using C/C++ to use the [Open Enclave SDK](https://openenclave.io/sdk/).
-- Doesn't allow you to run a full VM which means lest functionality is available to you.
+- Unlike nitro enclaves, it doesn't run as a full VM and requires software components to be developed using C/C++ to use the [Open Enclave SDK](https://openenclave.io/sdk/).
+- Doesn't allow you to run a full VM which means less functionality is available to you.
 
-If you would like to learn more on Confidential Compute checkout the docs [here](https://docs.microsoft.com/en-us/azure/confidential-computing/).
+If you would like to learn more on Confidential Compute check out the docs [here](https://docs.microsoft.com/en-us/azure/confidential-computing/).
 
 ## Use cases
 
 ### Password storage
 
-A common use case i see for secure computing is creating a extremely secure password storage mechanism, lots of applications store passwords and there is a lot of room for error and creating accidental vulnerabilities. Offloading the task to a trusted environment will help mitigate this risk as passwords can only been accessed in the secured environment.
+A common use case i see for secure computing is creating an extremely secure password storage mechanism, lots of applications store passwords and there is a lot of room for error and creating accidental vulnerabilities. Offloading the task to a trusted environment will help mitigate this risk as passwords can only be accessed in the secured environment.
 
 ### Blockchain
 
-Blockchain nodes are run and maintained by operators or validators who wish to ensure integrity and reach consensus on the state of the network. The nodes themselves are replicas and are used to track blockchain transactions. Each node has a full copy of the transaction history, ensuring integrity and availability in a distributed network. Blockchain technologies built on top of confidential computing can use hardware-based privacy to enable data confidentiality and secure computations.
+Blockchain nodes are run and maintained by operators or validators who wish to ensure the integrity and reach consensus on the state of the network. The nodes themselves are replicas and are used to track blockchain transactions. Each node has a full copy of the transaction history, ensuring integrity and availability in a distributed network. Blockchain technologies built on top of confidential computing can use hardware-based privacy to enable data confidentiality and secure computations.
 
 ### Financial 
 
@@ -88,8 +88,8 @@ Banks and financial businesses alike deal with a lot of sensitive information, s
 
 ### Health care
 
-Health care companies deal with lots of sensitive patient data which can be processed from within a TEE, this allows isolation of sensitive documents and data is only processed from within a TEE. This is where my personal experience lies with using TEE's as we have been signing prescriptions securely from within a TEE.
+Health care companies deal with lots of sensitive patient data which can be processed from within a TEE, this allows isolation of sensitive documents, and data is only processed from within a TEE. This is where my personal experience lies with using TEE's as we have been signing prescriptions securely from within a TEE.
 
 ## Conclusion
 
-In time to come as these products become more mature and people reap the benefits of the extended security, the eco system for these products will grow and could become a real game changer for how secure data is processed. This is great for companies as the last thing they want is their users sensitive data being leaked online!  
+In time to come as these products become more mature and people reap the benefits of the extended security, the ecosystem for these products will grow and could become a real game-changer for how secure data is processed. This is great for companies as the last thing they want is their user's sensitive data being leaked online!  
