@@ -8,27 +8,12 @@ featuredimage: /img/nitro-enclave.png
 tags:
   - aws
   - python
+  - nitro enclaves
 ---
 
 ## Introduction to Nitro
 
-### AWS Nitro System
-
----
-
-In short [AWS Nitro](https://aws.amazon.com/ec2/nitro/) is the underlying platform for the next generation of EC2 instances.
-
-With claims of having:
-
-- Faster innovation
-- Enhanced security
-- Better performance and price
-
-These claims are great for us. Who doesn't love an increase in these areas!
-
-Enough about Nitro here's how Nitro Enclaves come into play. ⬇️
-
-![enclave diagram](/img/nitro-enclave.png)
+First of all If you would like to know more about nitro enclaves please see my blog post [here](https://elliotmorris.dev/blog/2021-01-16-aws-nitro-enclave) which goes into detail on them I even mention it in the post briefly but I decided its cool enough for its own post.
 
 ### Use case overview
 
