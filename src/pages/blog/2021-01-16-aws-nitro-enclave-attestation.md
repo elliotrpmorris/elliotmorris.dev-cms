@@ -11,7 +11,7 @@ tags:
   - nitro enclave
 ---
 
-## Introduction to Nitro Enclaves
+## Introduction to Nitro Enclaves & Secure Computing
 
 First of all If you would like to know more about nitro enclaves please read my blog post about them [here](https://elliotmorris.dev/blog/2021-01-16-aws-nitro-enclave). Nitro enclaves are classed as trusted execution environment (TEEs). I also have a blog post which goes into detail about TEEs and secure computing which you can find [here](https://elliotmorris.dev/blog/2021-04-26-confidential-computing/). These articles will provide background context to what I am talking about in this blog post.
 
