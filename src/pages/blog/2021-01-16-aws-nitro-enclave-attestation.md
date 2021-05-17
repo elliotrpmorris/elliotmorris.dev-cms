@@ -107,6 +107,9 @@ The KMS service then makes the attested calls to `GenerateDataKey` and `Decrypt`
 
 A complete example of what the KMS service should look like can be found [here](https://github.com/donkersgoed/nitropepper-enclave-app/blob/main/kms.py).
 
+
+This is the flow for how the application makes the attested requests.
+
 ![attestation](/img/attest.png)
 
 ### How the attested encryption works
@@ -143,4 +146,4 @@ AWS KMS provides kms:RecipientAttestation:ImageSha384 and kms:RecipientAttestati
 
 ## Conclusion
 
-Attestation is a great feature to enable that extra layer of security if you are using TEEs. Similarly to AWS; Azure also provides an attestation feature which can be found (here)(https://azure.microsoft.com/en-gb/services/azure-attestation/).
+Attestation is a great feature to enable that extra layer of security if you are using TEEs. Similarly to AWS; Azure also provides an attestation feature which can be found [here](https://azure.microsoft.com/en-gb/services/azure-attestation/).
