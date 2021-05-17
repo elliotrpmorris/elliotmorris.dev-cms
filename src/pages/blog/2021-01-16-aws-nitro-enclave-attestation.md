@@ -108,6 +108,8 @@ The KMS service then makes the attested calls to `GenerateDataKey` and `Decrypt`
 A complete example of what the KMS service should look like can be found [here](https://github.com/donkersgoed/nitropepper-enclave-app/blob/main/kms.py).
 
 
+### Attested request flow
+
 This is the flow for how the application makes the attested requests.
 
 ![attestation](/img/attest.png)
