@@ -13,7 +13,7 @@ tags:
 
 ## Introduction to Nitro Enclaves & Secure Computing
 
-First of all If you would like to know more about nitro enclaves please read my blog post about them [here](https://elliotmorris.dev/blog/2021-01-16-aws-nitro-enclave). Nitro enclaves are classed as trusted execution environment (TEEs). I also have a blog post which goes into detail about TEEs and secure computing which you can find [here](https://elliotmorris.dev/blog/2021-04-26-confidential-computing/). These articles will provide background context to what I am talking about in this blog post.
+First of all, If you would like to know more about nitro enclaves please read my blog post about them [here](https://elliotmorris.dev/blog/2021-01-16-aws-nitro-enclave). Nitro enclaves are classed as trusted execution environment (TEEs). I also have a blog post which goes into detail about TEEs and secure computing which you can find [here](https://elliotmorris.dev/blog/2021-04-26-confidential-computing/). These articles will provide background context to what I am talking about in this blog post.
 
 ## Cryptographic attestation​
 
@@ -148,4 +148,4 @@ AWS KMS provides kms:RecipientAttestation:ImageSha384 and kms:RecipientAttestati
 
 ## Conclusion
 
-Attestation is a great feature to enable that extra layer of security if you are using TEEs. Similarly to AWS; Azure also provides an attestation feature which can be found [here](https://azure.microsoft.com/en-gb/services/azure-attestation/).
+Attestation is a great feature to enable that extra layer of security if you are using TEEs. Similar to AWS; Azure also provides an attestation feature which can be found [here](https://azure.microsoft.com/en-gb/services/azure-attestation/).
