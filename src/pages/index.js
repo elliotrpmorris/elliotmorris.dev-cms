@@ -43,7 +43,7 @@ export const IndexPageTemplate = () => (
              <span style={{flexBasis: "100%"}}>
               <Typewriter
                 options={{
-                  strings: ['An engineer.', 'An architect.', 'A consultant.'],
+                  strings: ['An engineer.', 'An architect.', 'A consultant.', 'AWS Certified'],
                   autoStart: true,
                   loop: true,
                 }}
